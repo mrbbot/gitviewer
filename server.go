@@ -268,5 +268,5 @@ func (s *Server) Run() {
 	r.UsingContext().Handle(http.MethodGet, "/static/*path", http.StripPrefix("/static", http.FileServer(http.Dir("static"))).ServeHTTP)
 	r.GET("/:repo", s.indexHandler)
 	r.GET("/:repo/*path", s.pathHandler)
-	log.Fatal(http.ListenAndServe(":8080", r))
+	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), r))
 }
