@@ -40,7 +40,6 @@ func (r *Repo) Refresh(auth map[string]*Auth) error {
 		// If it doesn't exist, try to clone it
 		_, err = git.PlainClone(repoLocalPath, false, &git.CloneOptions{
 			URL:      r.Url,
-			Depth:    1,
 			Progress: os.Stdout,
 			Auth:     basicAuth,
 		})
