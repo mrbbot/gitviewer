@@ -1,0 +1,46 @@
+{{- /*gotype: github.com/mrbbot/gitviewer.TemplateContext*/ -}}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{.Path}}</title>
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/dracula-prism.css">
+    <meta property="og:title" content="Git Viewer">
+    <meta property="og:description" content="{{.Path}}">
+</head>
+<body>
+<div class="container">
+    <div class="breadcrumbs">
+        {{ range .Breadcrumbs }}
+            {{if .Url}}
+                <a href="{{.Url}}">{{if .Bold}}<b>{{end}}{{.Name}}{{if .Bold}}</b>{{end}}</a>
+            {{else}}
+                <span>{{if .Bold}}<b>{{end}}{{.Name}}{{if .Bold}}</b>{{end}}</span>
+            {{end}}
+            {{if .Dir}}
+                <span>/</span>
+            {{end}}
+        {{ end }}
+    </div>
+    {{ if .Files }}
+        <div class="list">
+            {{ range .Files }}
+                <a href="{{.Url}}">{{.Name}}{{if .Dir}}/{{end}}</a>
+            {{ end }}
+        </div>
+    {{end}}
+    {{if .Content}}
+        <pre><code class="language-{{.PrismLanguage}} line-numbers">{{.Content}}</code></pre>
+    {{end}}
+    {{if .Image}}
+        <img src="{{.Image}}">
+    {{end}}
+</div>
+<script src="/static/js/prism.js"></script>
+</body>
+</html>

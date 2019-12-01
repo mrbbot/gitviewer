@@ -1,0 +1,170 @@
+[
+  {
+    "name": "text",
+    "extensions": [
+      "txt",
+      "text",
+      "gitignore",
+      "mod",
+      "sum",
+      "obj"
+    ]
+  },
+  {
+    "name": "markup",
+    "extensions": [
+      "html",
+      "vue"
+    ]
+  },
+  {
+    "name": "css"
+  },
+  {
+    "name": "jsx",
+    "extensions": [
+      "js",
+      "jsx"
+    ]
+  },
+  {
+    "name": "bash",
+    "extensions": "sh"
+  },
+  {
+    "name": "batch",
+    "extensions": [
+      "bat",
+      "cmd"
+    ]
+  },
+  {
+    "name": "csharp",
+    "extensions": "cs"
+  },
+  {
+    "name": "cpp",
+    "extensions": [
+      "cpp",
+      "cc"
+    ]
+  },
+  {
+    "name": "coffeescript",
+    "extensions": "coffee"
+  },
+  {
+    "name": "dart"
+  },
+  {
+    "name": "elm"
+  },
+  {
+    "name": "fsharp",
+    "extensions": "fs"
+  },
+  {
+    "name": "glsl"
+  },
+  {
+    "name": "go"
+  },
+  {
+    "name": "graphql"
+  },
+  {
+    "name": "handlebars",
+    "extensions": "hbs"
+  },
+  {
+    "name": "ini"
+  },
+  {
+    "name": "java"
+  },
+  {
+    "name": "json"
+  },
+  {
+    "name": "kotlin",
+    "extensions": "kt"
+  },
+  {
+    "name": "lua"
+  },
+  {
+    "name": "markdown",
+    "extensions": [
+      "markdown",
+      "md"
+    ]
+  },
+  {
+    "name": "pascal",
+    "extensions": [
+      "pas",
+      "dpr"
+    ]
+  },
+  {
+    "name": "php"
+  },
+  {
+    "name": "perl",
+    "extensions": "pl"
+  },
+  {
+    "name": "properties"
+  },
+  {
+    "name": "pug"
+  },
+  {
+    "name": "python",
+    "extensions": "py"
+  },
+  {
+    "name": "tsx",
+    "extensions": [
+      "ts",
+      "tsx"
+    ]
+  },
+  {
+    "name": "ruby",
+    "extensions": "rb"
+  },
+  {
+    "name": "rust",
+    "extensions": "rs"
+  },
+  {
+    "name": "sass"
+  },
+  {
+    "name": "scss"
+  },
+  {
+    "name": "scala"
+  },
+  {
+    "name": "sql"
+  },
+  {
+    "name": "stylus"
+  },
+  {
+    "name": "swift",
+    "extensions": "swift"
+  },
+  {
+    "name": "visual-basic",
+    "extensions": "vb"
+  },
+  {
+    "name": "wasm"
+  },
+  {
+    "name": "yaml"
+  }
+]
