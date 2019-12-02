@@ -192,9 +192,22 @@ func (s *Server) pathHandler(w http.ResponseWriter, r *http.Request, params map[
 		for i := 0; i < fileCount; i++ {
 			file := files[i]
 			name, dir := file.Name(), file.IsDir()
+
+			// Exclude .git dir
 			if dir && name == ".git" {
 				continue
 			}
+
+			// Skip empty dirs if this is an dir
+			if dir {
+				name, err = skipEmptyDirs(filepath.Join(filePath, name), name)
+				if err != nil {
+					http.Error(w, err.Error(), http.StatusInternalServerError)
+					return
+				}
+			}
+
+			// Append file
 			ctx.Files = append(ctx.Files, &File{
 				Name: name,
 				Url:  path.Join("/"+repoName, relativePath, name),
@@ -218,9 +231,25 @@ func (s *Server) pathHandler(w http.ResponseWriter, r *http.Request, params map[
 	}
 
 	// Recompile template each time during development
-	s.tmpl = template.Must(template.ParseFiles("template.html"))
+	//s.tmpl = template.Must(template.ParseFiles("template.html"))
 	// Render & return the template
 	_ = s.tmpl.Execute(w, ctx)
+}
+
+func skipEmptyDirs(filePath, name string) (string, error) {
+	// Read dir for files/dirs
+	dirContents, err := ioutil.ReadDir(filePath)
+	if err != nil {
+		return "", err
+	}
+
+	// Check if the directory only contains a directory then recurse
+	if len(dirContents) == 1 && dirContents[0].IsDir() {
+		return skipEmptyDirs(filepath.Join(filePath, dirContents[0].Name()), path.Join(name, dirContents[0].Name()))
+	}
+
+	// Otherwise just return the current name
+	return name, nil
 }
 
 func (s *Server) Run() {
