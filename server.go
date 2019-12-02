@@ -198,7 +198,7 @@ func (s *Server) pathHandler(w http.ResponseWriter, r *http.Request, params map[
 				continue
 			}
 
-			// Skip empty dirs if this is an dir
+			// Skip empty dirs if this is a dir
 			if dir {
 				name, err = skipEmptyDirs(filepath.Join(filePath, name), name)
 				if err != nil {
