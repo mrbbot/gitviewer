@@ -4,6 +4,7 @@ import (
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"net/url"
+	"path/filepath"
 	"strings"
 )
 
@@ -20,7 +21,7 @@ type Config struct {
 // Refresh the config from the config.yml file
 func (c *Config) Refresh() error {
 	// Load the config file and parse the YAML
-	data, err := ioutil.ReadFile("config.yml")
+	data, err := ioutil.ReadFile(filepath.Join("repos", "config.yml"))
 	if err != nil {
 		return err
 	}

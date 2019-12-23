@@ -2,7 +2,7 @@
 
 View specific directories of private git repositories.
 
-Example `config.yml` file (to be placed in working directory):
+Example `config.yml` file (to be placed in `repos` directory in working directory):
 
 ```yaml
 auth:
