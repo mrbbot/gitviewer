@@ -1,31 +1,21 @@
 [
   {
     "name": "text",
-    "extensions": [
-      "txt",
-      "text",
-      "gitignore",
-      "mod",
-      "sum",
-      "obj"
-    ]
+    "extensions": ["txt", "text", "gitignore", "mod", "sum", "obj"]
   },
   {
     "name": "markup",
-    "extensions": [
-      "html",
-      "vue"
-    ]
+    "extensions": ["html", "vue"]
   },
   {
     "name": "css"
   },
   {
-    "name": "jsx",
-    "extensions": [
-      "js",
-      "jsx"
-    ]
+    "name": "javascript",
+    "extensions": ["js"]
+  },
+  {
+    "name": "jsx"
   },
   {
     "name": "bash",
@@ -33,10 +23,7 @@
   },
   {
     "name": "batch",
-    "extensions": [
-      "bat",
-      "cmd"
-    ]
+    "extensions": ["bat", "cmd"]
   },
   {
     "name": "csharp",
@@ -44,10 +31,7 @@
   },
   {
     "name": "cpp",
-    "extensions": [
-      "cpp",
-      "cc"
-    ]
+    "extensions": ["cpp", "cc"]
   },
   {
     "name": "coffeescript",
@@ -94,17 +78,11 @@
   },
   {
     "name": "markdown",
-    "extensions": [
-      "markdown",
-      "md"
-    ]
+    "extensions": ["markdown", "md"]
   },
   {
     "name": "pascal",
-    "extensions": [
-      "pas",
-      "dpr"
-    ]
+    "extensions": ["pas", "dpr"]
   },
   {
     "name": "php"
@@ -125,10 +103,7 @@
   },
   {
     "name": "tsx",
-    "extensions": [
-      "ts",
-      "tsx"
-    ]
+    "extensions": ["ts", "tsx"]
   },
   {
     "name": "ruby",
