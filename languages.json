@@ -1,7 +1,7 @@
 [
   {
     "name": "text",
-    "extensions": ["txt", "text", "gitignore", "mod", "sum", "obj"]
+    "extensions": ["txt", "text", "gitignore", "mod", "sum", "obj", "proto"]
   },
   {
     "name": "markup",
